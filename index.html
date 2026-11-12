@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 嚴格聲明：禁止任何 AI 爬蟲與生圖模型抓取本頁面圖片 -->
+  <meta name="robots" content="noai, noimageai" />
+  <meta name="googlebot" content="noimageai" />
+  <title>Hiyori in Eorzea</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="crest">✦ EORZEA ADVENTURE LOG ✦</div>
+      <h1>Hiyori in Eorzea</h1>
+      <p class="subtitle">艾歐澤亞旅途光影紀錄與二創典藏館</p>
+
+      <nav class="filter-bar" aria-label="內容分類篩選">
+        <button class="filter-btn active" data-filter="all">全部紀錄</button>
+        <button class="filter-btn" data-filter="screenshot">遊戲截圖 (Gpose)</button>
+        <button class="filter-btn" data-filter="fanart">二創插圖</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="copyright-banner">
+      <span>🛡️ 版權聲明：本網站展示之所有遊戲截圖與二創插圖僅供個人紀錄與欣賞，嚴禁下載、轉載或作為任何 AI 生圖與模型訓練材料。</span>
+    </div>
+
+    <!-- 瀑布流卡片容器（完整保留圖片原始長寬比例） -->
+    <section id="gallery" class="masonry-grid" aria-live="polite"></section>
+
+    <div id="empty-state" class="empty-state hidden">
+      <p>目前資料夾中尚無紀錄，快將 <code>.png</code> 圖片上傳至 <code>assets/screenshots/</code> 或 <code>assets/fanart/</code> 吧！</p>
+    </div>
+  </main>
+
+  <!-- 燈箱檢視原圖 -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="關閉檢視">&times;</button>
+    <div class="lightbox-content">
+      <div class="img-shield-wrapper">
+        <img id="lightbox-img" src="" alt="放大檢視" draggable="false" />
+        <div class="img-shield-overlay"></div>
+      </div>
+      <div class="lightbox-meta">
+        <span id="lightbox-badge" class="badge"></span>
+        <p id="lightbox-primary" class="primary-meta"></p>
+        <p id="lightbox-note" class="note-meta"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© Hiyori in Eorzea · Images strictly prohibited from AI training &amp; generation.</p>
+  </footer>
+
+  <!-- 自動生成的資料清單 -->
+  <script src="js/entries.js"></script>
+  <!-- 畫面渲染與防盜互動邏輯 -->
+  <script src="js/app.js"></script>
+</body>
+</html>
